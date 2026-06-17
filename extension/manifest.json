@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Watch Party",
+  "version": "1.0.0",
+  "description": "Host a watch party and watch YouTube in perfect sync with friends — play, pause, seek, speed, chat.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "action": {
+    "default_title": "Watch Party",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": [
+        "shared/messages.js",
+        "shared/storage.js",
+        "content/sync.js",
+        "content/player.js",
+        "content/overlay.js",
+        "content/content.js"
+      ],
+      "css": ["content/overlay.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

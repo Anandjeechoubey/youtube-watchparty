@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>Watch Party</title>
+  </head>
+  <body>
+    <header>
+      <h1>🎬 Watch Party</h1>
+      <span id="status" class="status">—</span>
+    </header>
+
+    <!-- Settings -->
+    <section class="settings">
+      <label>
+        Display name
+        <input id="name" type="text" placeholder="Your name" maxlength="24" />
+      </label>
+      <label>
+        Server URL
+        <input id="server" type="text" placeholder="ws://localhost:8080" />
+      </label>
+    </section>
+
+    <!-- Not in a party -->
+    <section id="lobby">
+      <button id="create" class="primary">Create a party</button>
+      <div class="divider"><span>or join one</span></div>
+      <div class="join-row">
+        <input id="room" type="text" placeholder="ROOM CODE" maxlength="6" autocomplete="off" />
+        <button id="join">Join</button>
+      </div>
+      <p id="notice" class="notice hidden">Open a YouTube video first, then create or join.</p>
+    </section>
+
+    <!-- In a party -->
+    <section id="party" class="hidden">
+      <div class="room-box">
+        <div class="room-label">Room code</div>
+        <div class="room-code" id="room-code">——————</div>
+        <div class="party-meta" id="party-meta"></div>
+      </div>
+      <div class="actions">
+        <button id="copy-code">Copy code</button>
+        <button id="copy-link">Copy invite link</button>
+      </div>
+      <button id="leave" class="danger">Leave party</button>
+    </section>
+
+    <footer>
+      <span id="msg" class="msg"></span>
+    </footer>
+
+    <!-- shared globals (classic scripts run before the deferred module) -->
+    <script src="../shared/messages.js"></script>
+    <script src="../shared/storage.js"></script>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

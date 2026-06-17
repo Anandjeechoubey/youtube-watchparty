@@ -1,0 +1,17 @@
+{
+  "name": "youtube-watchparty-relay",
+  "version": "1.0.0",
+  "description": "WebSocket relay server for the YouTube Watch Party Chrome extension",
+  "main": "index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
