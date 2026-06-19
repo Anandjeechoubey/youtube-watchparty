@@ -32,6 +32,22 @@ Fastest way to let friends across the internet join — works while your machine
 runs the server + tunnel. Requires [`cloudflared`](https://github.com/cloudflare/cloudflared)
 (`brew install cloudflared`).
 
+**Easiest — use the helper script** ([`watchparty.sh`](watchparty.sh)). It starts the
+relay (if not already up), reuses or starts the tunnel, and prints + clipboard-copies
+the `wss://` URL:
+
+```bash
+./watchparty.sh            # start (or reuse) relay + tunnel, print the wss URL
+./watchparty.sh url        # just print the current URL
+./watchparty.sh status     # show relay + tunnel state
+./watchparty.sh stop       # stop the tunnel and the relay it started
+```
+
+Run it in your **own terminal** (not via any remote/agent shell) so the tunnel
+persists for your session. Runtime logs/PIDs live in `~/.youtube-watchparty/`.
+
+**Or do it manually:**
+
 ```bash
 # terminal 1 — the relay
 cd server && npm start                       # ws://localhost:8080
