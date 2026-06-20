@@ -1,0 +1,76 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="scene" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A211A"/><stop offset="0.6" stop-color="#3C2C20"/><stop offset="1" stop-color="#21130c"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B98A60"/><stop offset="0.55" stop-color="#7B5638"/><stop offset="1" stop-color="#4A3324"/>
+    </linearGradient>
+    <linearGradient id="pad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7EEE2"/><stop offset="1" stop-color="#E7D3BB"/>
+    </linearGradient>
+    <symbol id="paw" viewBox="0 0 128 128">
+      <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)"/>
+      <g fill="url(#pad)"><circle cx="37" cy="52" r="9"/><circle cx="53.5" cy="40" r="9.5"/><circle cx="74.5" cy="40" r="9.5"/><circle cx="91" cy="52" r="9"/></g>
+      <path d="M64 57 C 85 57, 97 71, 97 85 C 97 100, 83 108, 64 108 C 45 108, 31 100, 31 85 C 31 71, 43 57, 64 57 Z" fill="url(#pad)"/>
+      <path d="M57 73 L57 99 L82 86 Z" fill="#5A3A26" stroke="#5A3A26" stroke-width="4" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+
+  <rect width="1280" height="800" fill="url(#scene)"/>
+  <text x="640" y="86" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="42" font-weight="800" fill="#F7EEE2">Start or join a party in seconds</text>
+  <text x="640" y="124" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="500" fill="#D9C4AC">Set your name, hit Create, and share the room code or invite link.</text>
+
+  <!-- ===== Card A: lobby ===== -->
+  <g font-family="Helvetica, Arial, sans-serif">
+    <rect x="120" y="190" width="440" height="438" rx="16" fill="#221c17" stroke="#3f352c" stroke-width="1.5"/>
+    <rect x="120" y="190" width="440" height="56" rx="16" fill="#2d2620"/>
+    <use href="#paw" x="142" y="206" width="26" height="26"/>
+    <text x="178" y="226" font-size="17" font-weight="700" fill="#F3ECE2">PAWP <tspan fill="#C99A6E">connect</tspan></text>
+    <rect x="438" y="206" width="104" height="24" rx="12" fill="#1a1511"/>
+    <text x="490" y="223" text-anchor="middle" font-size="11" fill="#b3a594">not in a party</text>
+
+    <text x="144" y="286" font-size="12" fill="#b3a594">Display name</text>
+    <rect x="144" y="296" width="392" height="40" rx="9" fill="#1a1511" stroke="#3f352c"/>
+    <text x="160" y="321" font-size="14" fill="#f3ece2">Anand Jee Choubey</text>
+
+    <text x="144" y="360" font-size="12" fill="#b3a594">Server URL</text>
+    <rect x="144" y="370" width="392" height="40" rx="9" fill="#1a1511" stroke="#3f352c"/>
+    <text x="160" y="395" font-size="13" fill="#cdbba6">wss://your-party.trycloudflare.com</text>
+
+    <rect x="144" y="430" width="392" height="46" rx="10" fill="#a9744f"/>
+    <text x="340" y="459" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Create a party</text>
+
+    <line x1="144" y1="506" x2="306" y2="506" stroke="#3f352c"/>
+    <line x1="374" y1="506" x2="536" y2="506" stroke="#3f352c"/>
+    <text x="340" y="511" text-anchor="middle" font-size="12" fill="#b3a594">or join one</text>
+
+    <rect x="144" y="528" width="300" height="44" rx="9" fill="#1a1511" stroke="#3f352c"/>
+    <text x="162" y="556" font-size="15" letter-spacing="3" fill="#8a7d6c">ROOM CODE</text>
+    <rect x="456" y="528" width="80" height="44" rx="9" fill="#2d2620" stroke="#3f352c"/>
+    <text x="496" y="556" text-anchor="middle" font-size="15" fill="#f3ece2">Join</text>
+  </g>
+
+  <!-- ===== Card B: in a party ===== -->
+  <g font-family="Helvetica, Arial, sans-serif">
+    <rect x="720" y="190" width="440" height="438" rx="16" fill="#221c17" stroke="#3f352c" stroke-width="1.5"/>
+    <rect x="720" y="190" width="440" height="56" rx="16" fill="#2d2620"/>
+    <use href="#paw" x="742" y="206" width="26" height="26"/>
+    <text x="778" y="226" font-size="17" font-weight="700" fill="#F3ECE2">PAWP <tspan fill="#C99A6E">connect</tspan></text>
+    <rect x="1066" y="206" width="76" height="24" rx="12" fill="#1a1511"/>
+    <text x="1104" y="223" text-anchor="middle" font-size="11" font-weight="600" fill="#8bb673">host</text>
+
+    <rect x="744" y="282" width="392" height="160" rx="12" fill="#1a1511" stroke="#3f352c"/>
+    <text x="940" y="316" text-anchor="middle" font-size="12" fill="#b3a594">ROOM CODE</text>
+    <text x="940" y="366" text-anchor="middle" font-size="44" font-weight="800" letter-spacing="6" fill="#F7EEE2">PAW7QX</text>
+    <text x="940" y="408" text-anchor="middle" font-size="13" fill="#b3a594">You are the host · 3 watching</text>
+
+    <rect x="744" y="460" width="190" height="44" rx="9" fill="#2d2620" stroke="#3f352c"/>
+    <text x="839" y="488" text-anchor="middle" font-size="14" fill="#f3ece2">Copy code</text>
+    <rect x="946" y="460" width="190" height="44" rx="9" fill="#2d2620" stroke="#3f352c"/>
+    <text x="1041" y="488" text-anchor="middle" font-size="14" fill="#f3ece2">Copy invite link</text>
+
+    <rect x="744" y="520" width="392" height="46" rx="10" fill="none" stroke="#5a3030" stroke-width="1.5"/>
+    <text x="940" y="549" text-anchor="middle" font-size="15" font-weight="600" fill="#e08a6b">Leave party</text>
+  </g>
+</svg>

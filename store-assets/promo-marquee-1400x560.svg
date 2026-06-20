@@ -1,0 +1,66 @@
+<svg width="1400" height="560" viewBox="0 0 1400 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="scene" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A211A"/>
+      <stop offset="0.6" stop-color="#3C2C20"/>
+      <stop offset="1" stop-color="#21130c"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B98A60"/>
+      <stop offset="0.55" stop-color="#7B5638"/>
+      <stop offset="1" stop-color="#4A3324"/>
+    </linearGradient>
+    <linearGradient id="pad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7EEE2"/>
+      <stop offset="1" stop-color="#E7D3BB"/>
+    </linearGradient>
+
+    <symbol id="paw" viewBox="0 0 128 128">
+      <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)"/>
+      <ellipse cx="64" cy="98" rx="34" ry="9" fill="#2c1d13" opacity="0.18"/>
+      <g fill="url(#pad)">
+        <circle cx="37" cy="52" r="9"/><circle cx="53.5" cy="40" r="9.5"/>
+        <circle cx="74.5" cy="40" r="9.5"/><circle cx="91" cy="52" r="9"/>
+      </g>
+      <path d="M64 57 C 85 57, 97 71, 97 85 C 97 100, 83 108, 64 108 C 45 108, 31 100, 31 85 C 31 71, 43 57, 64 57 Z" fill="url(#pad)"/>
+      <path d="M57 73 L57 99 L82 86 Z" fill="#5A3A26" stroke="#5A3A26" stroke-width="4" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="pawline" viewBox="0 0 128 128">
+      <g fill="#ffffff">
+        <circle cx="37" cy="52" r="9"/><circle cx="53.5" cy="40" r="9.5"/>
+        <circle cx="74.5" cy="40" r="9.5"/><circle cx="91" cy="52" r="9"/>
+        <path d="M64 57 C 85 57, 97 71, 97 85 C 97 100, 83 108, 64 108 C 45 108, 31 100, 31 85 C 31 71, 43 57, 64 57 Z"/>
+      </g>
+    </symbol>
+  </defs>
+
+  <rect width="1400" height="560" fill="url(#scene)"/>
+
+  <!-- faint paw watermarks -->
+  <use href="#pawline" x="1070" y="40" width="380" height="380" opacity="0.05"/>
+  <use href="#pawline" x="1180" y="330" width="170" height="170" opacity="0.05"/>
+  <use href="#pawline" x="980" y="380" width="120" height="120" opacity="0.05"/>
+
+  <!-- icon -->
+  <use href="#paw" x="110" y="150" width="180" height="180"/>
+
+  <!-- wordmark -->
+  <text x="330" y="232" font-family="Helvetica, Arial, sans-serif" font-size="92" font-weight="800" fill="#F7EEE2">PAWP<tspan dx="26" fill="#C99A6E">connect</tspan></text>
+
+  <!-- tagline -->
+  <text x="334" y="300" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="500" fill="#D9C4AC">Watch YouTube together — perfectly in sync.</text>
+
+  <!-- feature chips -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#EADBC8">
+    <rect x="334" y="350" width="290" height="52" rx="26" fill="#ffffff" fill-opacity="0.08"/>
+    <circle cx="364" cy="376" r="6" fill="#C99A6E"/>
+    <text x="382" y="384">Synced play / pause</text>
+    <rect x="640" y="350" width="228" height="52" rx="26" fill="#ffffff" fill-opacity="0.08"/>
+    <circle cx="670" cy="376" r="6" fill="#C99A6E"/>
+    <text x="688" y="384">Seek &amp; speed</text>
+    <rect x="884" y="350" width="206" height="52" rx="26" fill="#ffffff" fill-opacity="0.08"/>
+    <circle cx="914" cy="376" r="6" fill="#C99A6E"/>
+    <text x="932" y="384">Group chat</text>
+  </g>
+</svg>
