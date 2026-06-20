@@ -83,7 +83,9 @@ async function ensureContentScript(tabId) {
 }
 
 // Poll the content script's status until it connects (or errors / times out).
-async function waitForConnection(timeoutMs = 4000) {
+// Generous timeout: a tunnel's first connect (DNS + TLS + cold edge route) can
+// take several seconds.
+async function waitForConnection(timeoutMs = 12000) {
   const deadline = Date.now() + timeoutMs;
   while (Date.now() < deadline) {
     const s = await sendToTab('status', {});

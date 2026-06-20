@@ -21,7 +21,9 @@ TUN_PID="$STATE_DIR/tunnel.pid"
 
 relay_up()   { curl -fsS "http://localhost:$PORT/health" >/dev/null 2>&1; }
 pid_alive()  { [ -f "$1" ] && kill -0 "$(cat "$1" 2>/dev/null)" 2>/dev/null; }
-tunnel_url() { grep -Eo 'https://[a-z0-9-]+\.trycloudflare\.com' "$TUN_LOG" 2>/dev/null | head -1; }
+# -a: cloudflared writes some non-text bytes to the log, which makes grep treat
+# it as binary and print "Binary file … matches" instead of the URL. Force text.
+tunnel_url() { grep -aEo 'https://[a-z0-9-]+\.trycloudflare\.com' "$TUN_LOG" 2>/dev/null | head -1; }
 wss_of()     { local u="$1"; [ -n "$u" ] && echo "wss://${u#https://}"; }
 
 # A live PID is NOT proof the tunnel works — the edge registration can drop
@@ -33,7 +35,10 @@ tunnel_reachable() {
 }
 
 print_url() {
-  if pid_alive "$TUN_PID" && tunnel_reachable; then
+  # Return the URL whenever the tunnel process is alive and a URL exists — even
+  # if not yet locally reachable (quick-tunnel DNS can lag 1-3 min). Use
+  # `status` to check actual reachability.
+  if pid_alive "$TUN_PID" && [ -n "$(tunnel_url)" ]; then
     local wss; wss="$(wss_of "$(tunnel_url)")"
     echo "$wss"
     if command -v pbcopy >/dev/null 2>&1; then printf "%s" "$wss" | pbcopy; fi
