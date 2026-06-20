@@ -1,12 +1,14 @@
 :root {
-  --bg: #1e1f24;
-  --panel: #26272e;
-  --line: #34353c;
-  --text: #f1f1f1;
-  --muted: #9aa0a6;
-  --accent: #3a5bd9;
-  --green: #5cd28a;
-  --red: #ff6b6b;
+  --bg: #221c17;
+  --panel: #2d2620;
+  --sunk: #1a1511;
+  --line: #3f352c;
+  --text: #f3ece2;
+  --muted: #b3a594;
+  --accent: #a9744f;
+  --accent-hover: #936139;
+  --green: #8bb673;
+  --red: #e08a6b;
 }
 
 * { box-sizing: border-box; }
@@ -28,14 +30,24 @@ header {
   background: var(--panel);
   border-bottom: 1px solid var(--line);
 }
-header h1 { font-size: 15px; margin: 0; }
+header h1 {
+  font-size: 15px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  letter-spacing: 0.2px;
+  font-weight: 700;
+}
+.brand-icon { width: 22px; height: 22px; border-radius: 6px; display: block; }
+.brand-light { color: var(--accent); font-weight: 600; }
 
 .status {
   font-size: 11px;
   color: var(--muted);
   padding: 2px 8px;
   border-radius: 10px;
-  background: #14151a;
+  background: var(--sunk);
 }
 .status[data-kind="connected"] { color: var(--green); }
 .status[data-kind="idle"] { color: var(--muted); }
@@ -51,7 +63,7 @@ label {
 input[type="text"] {
   width: 100%;
   margin-top: 4px;
-  background: #14151a;
+  background: var(--sunk);
   border: 1px solid var(--line);
   color: var(--text);
   border-radius: 8px;
@@ -83,7 +95,7 @@ button.primary {
   color: #fff;
   font-weight: 600;
 }
-button.primary:hover { background: #2f4cc0; }
+button.primary:hover { background: var(--accent-hover); }
 
 button.danger {
   width: 100%;
@@ -116,7 +128,7 @@ button.danger:hover { background: #3a2222; }
 .notice { color: var(--muted); font-size: 11px; margin: 10px 0 0; }
 
 .room-box {
-  background: #14151a;
+  background: var(--sunk);
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 12px;

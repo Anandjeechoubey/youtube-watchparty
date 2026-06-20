@@ -1,0 +1,44 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B98A60"/>
+      <stop offset="0.55" stop-color="#7B5638"/>
+      <stop offset="1" stop-color="#4A3324"/>
+    </linearGradient>
+    <linearGradient id="pad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7EEE2"/>
+      <stop offset="1" stop-color="#E7D3BB"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="0.3" cy="0.25" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- rounded-square badge -->
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)"/>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#sheen)"/>
+
+  <!-- soft shadow under the paw -->
+  <ellipse cx="64" cy="98" rx="34" ry="9" fill="#2c1d13" opacity="0.18"/>
+
+  <!-- toe beans -->
+  <g fill="url(#pad)">
+    <circle cx="37" cy="52" r="9"/>
+    <circle cx="53.5" cy="40" r="9.5"/>
+    <circle cx="74.5" cy="40" r="9.5"/>
+    <circle cx="91" cy="52" r="9"/>
+  </g>
+
+  <!-- main pad -->
+  <path d="M64 57
+           C 85 57, 97 71, 97 85
+           C 97 100, 83 108, 64 108
+           C 45 108, 31 100, 31 85
+           C 31 71, 43 57, 64 57 Z"
+        fill="url(#pad)"/>
+
+  <!-- play triangle in the pad -->
+  <path d="M57 73 L57 99 L82 86 Z"
+        fill="#5A3A26" stroke="#5A3A26" stroke-width="4" stroke-linejoin="round"/>
+</svg>

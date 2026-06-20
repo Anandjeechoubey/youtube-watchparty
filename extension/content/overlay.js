@@ -11,7 +11,7 @@
     host.id = 'wp-overlay';
     host.innerHTML = `
       <div class="wp-header">
-        <span class="wp-title">Watch Party</span>
+        <span class="wp-title">🐾 PAWP connect</span>
         <span class="wp-status" id="wp-status">connecting…</span>
         <button class="wp-collapse" id="wp-collapse" title="Collapse">–</button>
       </div>

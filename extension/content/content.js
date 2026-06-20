@@ -66,16 +66,32 @@
 
     state.room = room.toUpperCase();
     state.name = name || 'Guest';
-    state.serverUrl = serverUrl || state.serverUrl;
+    // A locked production build always uses its baked-in relay.
+    const locked = (window.WP.config && window.WP.config.lockedServerUrl) || '';
+    state.serverUrl = locked || serverUrl || state.serverUrl;
     state.currentVideoId = player.getVideoId();
 
     state.lastError = null;
     ensureOverlay();
     setStatus('connecting…', 'syncing');
 
+    // Put the room in the URL so a Durable-Object backend can route the socket
+    // to the right room at connect time. The Node relay ignores the query and
+    // keys rooms off the join message instead, so this works with both.
+    let wsUrl;
+    try {
+      const u = new URL(state.serverUrl);
+      u.searchParams.set('room', state.room);
+      wsUrl = u.toString();
+    } catch (e) {
+      state.lastError = 'invalid server URL';
+      setStatus('bad server URL', 'error');
+      return;
+    }
+
     let ws;
     try {
-      ws = new WebSocket(state.serverUrl);
+      ws = new WebSocket(wsUrl);
     } catch (e) {
       state.lastError = 'invalid server URL';
       setStatus('bad server URL', 'error');

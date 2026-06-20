@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1>🎬 Watch Party</h1>
+      <h1><img src="../icons/icon-32.png" alt="" class="brand-icon" /> PAWP <span class="brand-light">connect</span></h1>
       <span id="status" class="status">—</span>
     </header>
 
@@ -18,7 +18,7 @@
         Display name
         <input id="name" type="text" placeholder="Your name" maxlength="24" />
       </label>
-      <label>
+      <label id="server-field">
         Server URL
         <input id="server" type="text" placeholder="ws://localhost:8080" />
       </label>
@@ -54,6 +54,7 @@
     </footer>
 
     <!-- shared globals (classic scripts run before the deferred module) -->
+    <script src="../shared/config.js"></script>
     <script src="../shared/messages.js"></script>
     <script src="../shared/storage.js"></script>
     <script type="module" src="popup.js"></script>

@@ -1,6 +1,6 @@
-# 🎬 YouTube Watch Party
+# 🐾 PAWP connect
 
-A Chrome extension to **host a watch party and watch YouTube in perfect sync with friends**. Anyone in the party can play, pause, seek, or change the playback speed, and it instantly syncs for everyone. Includes text chat with a quick‑emoji bar, a live participant list, automatic "load the same video," and drift correction.
+**PAWP connect** is a Chrome extension to **host a watch party and watch YouTube in perfect sync with friends**. Anyone in the party can play, pause, seek, or change the playback speed, and it instantly syncs for everyone. Includes text chat with a quick‑emoji bar, a live participant list, automatic "load the same video," and drift correction.
 
 ```
 youtube-watchparty/

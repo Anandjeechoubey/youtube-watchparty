@@ -9,6 +9,7 @@ const els = {
   status: document.getElementById('status'),
   name: document.getElementById('name'),
   server: document.getElementById('server'),
+  serverField: document.getElementById('server-field'),
   lobby: document.getElementById('lobby'),
   party: document.getElementById('party'),
   create: document.getElementById('create'),
@@ -226,6 +227,13 @@ async function init() {
   const settings = await STORE.getSettings();
   els.name.value = settings.displayName;
   els.server.value = settings.serverUrl;
+
+  // Locked production build: force the baked-in relay and hide the field.
+  const locked = (window.WP.config && window.WP.config.lockedServerUrl) || '';
+  if (locked) {
+    els.server.value = locked;
+    els.serverField.classList.add('hidden');
+  }
 
   els.create.addEventListener('click', createParty);
   els.join.addEventListener('click', joinParty);

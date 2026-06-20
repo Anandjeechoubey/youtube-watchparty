@@ -4,9 +4,9 @@
   right: 16px;
   width: 300px;
   max-height: calc(100vh - 96px);
-  background: #1e1f24;
-  color: #f1f1f1;
-  border: 1px solid #34353c;
+  background: #221c17;
+  color: #f3ece2;
+  border: 1px solid #3f352c;
   border-radius: 12px;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
   font-family: "Roboto", "Segoe UI", system-ui, sans-serif;
@@ -22,8 +22,8 @@
   align-items: center;
   gap: 8px;
   padding: 10px 12px;
-  background: #26272e;
-  border-bottom: 1px solid #34353c;
+  background: #2d2620;
+  border-bottom: 1px solid #3f352c;
 }
 
 #wp-overlay .wp-title {
@@ -34,18 +34,18 @@
 #wp-overlay .wp-status {
   flex: 1 1 auto;
   font-size: 11px;
-  color: #9aa0a6;
+  color: #b3a594;
   text-align: right;
 }
-#wp-overlay .wp-status[data-state="connected"] { color: #5cd28a; }
-#wp-overlay .wp-status[data-state="syncing"] { color: #f7c948; }
-#wp-overlay .wp-status[data-state="error"] { color: #ff6b6b; }
+#wp-overlay .wp-status[data-state="connected"] { color: #8bb673; }
+#wp-overlay .wp-status[data-state="syncing"] { color: #e0b15e; }
+#wp-overlay .wp-status[data-state="error"] { color: #e08a6b; }
 
 #wp-overlay .wp-collapse {
   flex: 0 0 auto;
   background: transparent;
   border: none;
-  color: #c7c9d1;
+  color: #d8cab8;
   font-size: 18px;
   line-height: 1;
   cursor: pointer;
@@ -53,7 +53,7 @@
   height: 22px;
   border-radius: 6px;
 }
-#wp-overlay .wp-collapse:hover { background: #34353c; }
+#wp-overlay .wp-collapse:hover { background: #3f352c; }
 
 #wp-overlay .wp-body {
   display: flex;
@@ -68,11 +68,11 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.4px;
-  color: #9aa0a6;
+  color: #b3a594;
   margin-bottom: 6px;
 }
 
-#wp-overlay .wp-people { border-bottom: 1px solid #2c2d34; max-height: 120px; overflow-y: auto; }
+#wp-overlay .wp-people { border-bottom: 1px solid #382f27; max-height: 120px; overflow-y: auto; }
 #wp-overlay #wp-participants { list-style: none; margin: 0; padding: 0; }
 #wp-overlay #wp-participants li {
   padding: 3px 0;
@@ -83,7 +83,7 @@
 #wp-overlay .wp-hosttag {
   font-size: 9px;
   text-transform: uppercase;
-  background: #3a5bd9;
+  background: #a9744f;
   color: #fff;
   padding: 1px 5px;
   border-radius: 6px;
@@ -101,9 +101,9 @@
   padding-right: 4px;
 }
 #wp-overlay .wp-msg { line-height: 1.35; word-wrap: break-word; }
-#wp-overlay .wp-who { color: #8ab4f8; font-weight: 600; }
-#wp-overlay .wp-self .wp-who { color: #5cd28a; }
-#wp-overlay .wp-system { color: #9aa0a6; font-style: italic; font-size: 12px; }
+#wp-overlay .wp-who { color: #d8a878; font-weight: 600; }
+#wp-overlay .wp-self .wp-who { color: #8bb673; }
+#wp-overlay .wp-system { color: #b3a594; font-style: italic; font-size: 12px; }
 
 #wp-overlay .wp-emojibar {
   display: flex;
@@ -119,22 +119,22 @@
   padding: 2px 4px;
   border-radius: 6px;
 }
-#wp-overlay .wp-emoji:hover { background: #34353c; }
+#wp-overlay .wp-emoji:hover { background: #3f352c; }
 
 #wp-overlay .wp-chatform { display: flex; gap: 6px; }
 #wp-overlay #wp-chatinput {
   flex: 1 1 auto;
-  background: #14151a;
-  border: 1px solid #34353c;
-  color: #f1f1f1;
+  background: #1a1511;
+  border: 1px solid #3f352c;
+  color: #f3ece2;
   border-radius: 8px;
   padding: 7px 9px;
   font-size: 13px;
   outline: none;
 }
-#wp-overlay #wp-chatinput:focus { border-color: #3a5bd9; }
+#wp-overlay #wp-chatinput:focus { border-color: #a9744f; }
 #wp-overlay .wp-chatform button {
-  background: #3a5bd9;
+  background: #a9744f;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -142,4 +142,4 @@
   cursor: pointer;
   font-size: 13px;
 }
-#wp-overlay .wp-chatform button:hover { background: #2f4cc0; }
+#wp-overlay .wp-chatform button:hover { background: #936139; }

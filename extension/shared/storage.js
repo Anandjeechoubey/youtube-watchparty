@@ -24,9 +24,13 @@
   }
 
   // Returns the full settings object with defaults filled in.
+  // In a locked production build, the relay URL is forced to the baked-in value.
   async function getSettings() {
     const stored = await get(Object.keys(DEFAULTS));
-    return { ...DEFAULTS, ...stored };
+    const settings = { ...DEFAULTS, ...stored };
+    const locked = (root.WP && root.WP.config && root.WP.config.lockedServerUrl) || '';
+    if (locked) settings.serverUrl = locked;
+    return settings;
   }
 
   async function setSettings(partial) {
