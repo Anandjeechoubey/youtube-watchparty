@@ -1,0 +1,14 @@
+{
+  "name": "pawp-connect-cf-relay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PAWP connect relay as a Cloudflare Worker + Durable Object",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.99.0"
+  }
+}

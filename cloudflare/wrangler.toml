@@ -1,0 +1,17 @@
+name = "pawp-connect-relay"
+main = "src/index.js"
+compatibility_date = "2025-01-15"
+
+# Serve on a *.workers.dev subdomain (the default after `wrangler deploy`).
+workers_dev = true
+
+# One Durable Object class = one party room per room code.
+[[durable_objects.bindings]]
+name = "PARTY_ROOM"
+class_name = "PartyRoom"
+
+# SQLite-backed Durable Objects are the ones available on the FREE Workers plan.
+# (Use new_sqlite_classes, not new_classes — the latter needs the paid plan.)
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["PartyRoom"]
